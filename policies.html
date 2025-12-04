@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Policies</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+/* Sidebar full container */
+.left-sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #0d47ea;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Sidebar buttons */
+.left-sidebar button {
+    width: 100%;
+    background: #3f7cff;
+    border: none;
+    padding: 16px 18px;       /* left padding for alignment */
+    margin: 12px 0;
+    text-align: left;         /* aligns text to left */
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+/* Hover effect */
+.left-sidebar button:hover {
+    background: #1a5cff;
+}
+
+/* Active button (white selected) */
+.left-sidebar button.active {
+    background: white;
+    color: #0d47ea;
+    font-weight: bold;
+}
+  body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4ff;
+            display: flex;
+       
+        }
+
+        /* Main Page */
+        main {
+            padding: 40px;
+            flex-grow: 1;
+        }
+
+        main h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Policy List Styles */
+        .policy-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            width: 80%;
+        }
+
+        .policy-box ul {
+            margin: 0;
+            padding: 0 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .policy-box li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="left-sidebar">
+    <h2>HR Portal</h2>
+    <button onclick="location.href='dashboard.html'">Dashboard</button>
+    <button onclick="location.href='leave.html'">Leave</button>
+    <button onclick="location.href='leave-approval.html'">Leave-approval</button>
+    <button onclick="location.href='onboarding.html'">On boarding</button>
+    <button onclick="location.href='performance.html'">Performance</button>
+  <button class="active" onclick="location.href='policies.html'">Policies</button>
+
+    <button onclick="location.href='login.html'">Logout</button>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main>
+    <h1>Company Policies</h1>
+
+    <div class="policy-box">
+        <ul>
+            <li>Leave Policy – Annual, Casual, and Medical Leaves</li>
+            <li>Code of Conduct – Employee Behavior & Ethics</li>
+            <li>IT Security Policy – Passwords & System Usage</li>
+            <li>Working Hours – Shift Timings & Break Rules</li>
+            <li>Dress Code – Formal and Casual occasionally</li>
+        </ul>
+    </div>
+</main>
+
+</body>
+</html>

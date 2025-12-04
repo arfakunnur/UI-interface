@@ -1,0 +1,123 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #1257e6;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar .brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.sidebar nav a {
+    background: #3d7bf7;
+    padding: 18px 12px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidebar nav a:hover {
+    background: #2c63d9;
+}
+
+.sidebar nav a.active {
+    background: white;
+    color: #1257e6;
+    font-weight: bold;
+    border-left: 5px solid #1257e6;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+    margin-left: 270px;
+    padding: 30px;
+}
+
+.main h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* ===== PERFORMANCE CARDS ===== */
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ===== FORM ===== */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 60%;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    background: #1257e6;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form button:hover {
+    background: #0b47c7;
+}

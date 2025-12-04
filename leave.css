@@ -1,0 +1,144 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* BODY */
+body {
+    background: #eef2f7;
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: #1257e6;
+    color: white;
+    height: 100vh;
+    padding: 25px 20px;
+    position: fixed;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.2);
+}
+
+.sidebar .brand {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* NAVIGATION */
+.sidebar nav a {
+    display: block;
+    text-decoration: none;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.sidebar nav a.active {
+    background: white;
+    color: #1257e6;
+    font-weight: 600;
+}
+
+/* MAIN CONTENT */
+.main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 30px;
+}
+
+.main h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* FORM STYLE */
+form {
+    background: white;
+    padding: 25px;
+    width: 70%;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    font-size: 15px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    background: #1257e6;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #0c3ca8;
+}
+
+/* TABLE STYLE */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+table thead {
+    background: #1257e6;
+    color: white;
+}
+
+table th, table td {
+    padding: 14px;
+    text-align: left;
+    font-size: 15px;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f3f6fb;
+}
+
+table tbody tr:hover {
+    background: #e5edff;
+}

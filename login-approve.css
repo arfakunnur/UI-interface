@@ -1,0 +1,143 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+    background: #eef2f7;
+    display: flex;
+    height: 100vh;
+}
+
+/* -------- SIDEBAR -------- */
+.sidebar {
+    width: 260px;
+    background: #1257e6;
+    color: white;
+    height: 100vh;
+    padding: 25px 20px;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.sidebar .brand {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.sidebar nav a.active {
+    background: white;
+    color: #1257e6;
+    font-weight: 600;
+}
+
+/* -------- MAIN CONTENT -------- */
+.main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 30px;
+}
+
+.main h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* -------- TABLE STYLE -------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+table thead {
+    background: #1257e6;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 14px;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f0f4ff;
+}
+
+table tbody tr:hover {
+    background: #e6edff;
+}
+
+/* -------- STATUS COLORS -------- */
+.status-approved {
+    color: green;
+    font-weight: 600;
+}
+
+.status-pending {
+    color: orange;
+    font-weight: 600;
+}
+
+.status-rejected {
+    color: red;
+    font-weight: 600;
+}
+
+/* -------- ACTION BUTTONS -------- */
+.action-btn {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.action-approve {
+    background: #1e9e46;
+    color: white;
+}
+.action-approve:hover {
+    background: #157535;
+}
+
+.action-reject {
+    background: #d62828;
+    color: white;
+}
+.action-reject:hover {
+    background: #a80000;
+}

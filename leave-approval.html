@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR Portal - Leave Approval</title>
+<link href="login-approve.css" rel="stylesheet" type="text/css"/>
+
+<style>
+/* Small fixes for button look */
+.action-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.approve-btn { background: green; color: white; }
+.reject-btn { background: red; color: white; }
+
+.status-approved { color: green; font-weight: bold; }
+.status-rejected { color: red; font-weight: bold; }
+.status-pending { color: orange; font-weight: bold; }
+</style>
+
+</head>
+<body>
+
+<div class="sidebar">
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="leave.html">Leave</a>
+        <a href="leave-approval.html" class="active">Leave Approval</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="performance.html">Performance</a>
+        <a href="policies.html">Policies</a>
+        <a href="login.html">Logout</a>
+    </nav>
+</div>
+
+<div class="main">
+    <h2>Leave Approval Panel (HR Only)</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Employee</th>
+                <th>Leave Type</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!-- Row 1 -->
+            <tr>
+                <td>Arfa K</td>
+                <td>Medical</td>
+                <td>2025-12-10</td>
+                <td>2025-12-12</td>
+                <td>Fever</td>
+
+                <td class="status status-pending">Pending</td>
+
+                <td class="actions">
+                    <button class="action-btn approve-btn">Approve</button>
+                    <button class="action-btn reject-btn">Reject</button>
+                </td>
+            </tr>
+
+            <!-- Row 2 -->
+            <tr>
+                <td>Rahul M</td>
+                <td>Casual</td>
+                <td>2025-11-25</td>
+                <td>2025-11-25</td>
+                <td>Travel</td>
+
+                <td class="status status-approved">Approved</td>
+
+                <td>✔</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<!-- JavaScript to make Approve/Reject work -->
+<script>
+document.querySelectorAll(".approve-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+        let row = btn.closest("tr");
+        let statusCell = row.querySelector(".status");
+        let actionCell = row.querySelector(".actions");
+
+        statusCell.textContent = "Approved";
+        statusCell.className = "status status-approved";
+
+        actionCell.innerHTML = "✔";
+    });
+});
+
+document.querySelectorAll(".reject-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+        let row = btn.closest("tr");
+        let statusCell = row.querySelector(".status");
+        let actionCell = row.querySelector(".actions");
+
+        statusCell.textContent = "Rejected";
+        statusCell.className = "status status-rejected";
+
+        actionCell.innerHTML = "✖";
+    });
+});
+</script>
+
+</body>
+</html>
